@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --ff-lexend-deca: "Lexend Deca", sans-serif; /*400*/
+  --ff-big-shoulders-display: "Big Shoulders Display", sans-serif; /*700*/
+  --fc-bright-orange: 31, 77%, 52%;
+  --fc-dark-cyan: 184, 100%, 22%;
+  --fc-very-dark-cyan: 179, 100%, 13%;
+  --fc-transparent-white: 0, 0%, 100%, 0.75; /*paragraphs*/
+  --fc-very-light-grey: 0, 0%, 95%; /*background, headings, buttons*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: var(--ff-big-shoulders-display);
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+body {
+  font-family: var(--ff-lexend-deca);
+  color: hsla(var(--fc-transparent-white));
+}
+
+p {
+  letter-spacing: 0.1rem;
+  line-height: 2;
+  font-size: 1.3rem;
+}
+
+/* link buttons */
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #fff;
+  font-size: 1.4rem;
+  padding: 1.4rem 1.8rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.container {
+  width: 90%;
+  margin: 3rem auto;
+}
+h2,
+.car-info {
+  margin: 2rem 0;
+}
+
+.btn-sedan {
+  color: hsl(var(--fc-bright-orange));
+}
+
+.btn-suv {
+  color: hsl(var(--fc-dark-cyan));
+}
+.btn-luxury {
+  color: hsl(var(--fc-very-dark-cyan));
+}
+
+.section-sedan,
+.section-suv,
+.section-luxury {
+  padding: 2rem;
+}
+
+.section-sedan {
+  background-color: hsl(var(--fc-bright-orange));
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.section-suv {
+  background-color: hsl(var(--fc-dark-cyan));
+}
+.section-luxury {
+  background-color: hsl(var(--fc-very-dark-cyan));
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media (min-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    line-height: 1.4;
+    font-size: 0.7rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 0.8rem 1.4rem;
+    margin-top: 4rem;
+  }
+
+  .section-sedan {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+
+  .section-luxury {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+@media (min-width: 950px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  .container {
+    max-width: 1000px;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 1rem 1.8rem;
+    margin-top: 4rem;
+  }
+}
